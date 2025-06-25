@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fc_vanilla:block/tinted_glass_carpet"
+    }
+  }
+}

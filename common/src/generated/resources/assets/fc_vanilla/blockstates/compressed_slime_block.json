@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "fc_vanilla:block/compressed_slime_block"
+    }
+  }
+}

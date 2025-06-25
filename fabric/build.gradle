@@ -7,6 +7,18 @@ architectury {
     fabric()
 }
 
+loom {
+    accessWidenerPath = project(":common").loom.accessWidenerPath
+}
+
+sourcesJar {
+    def commonSources = project(":common").sourcesJar
+    dependsOn commonSources
+    from commonSources.archiveFile.map { zipTree(it) }
+}
+
+sourceSets.main.resources { srcDir project(':common').file('src/generated/resources').getAbsolutePath() }
+
 configurations {
     common {
         canBeResolved = true

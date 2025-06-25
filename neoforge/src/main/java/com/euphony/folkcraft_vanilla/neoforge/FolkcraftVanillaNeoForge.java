@@ -6,7 +6,6 @@ import net.neoforged.fml.common.Mod;
 @Mod(FolkcraftVanilla.MOD_ID)
 public final class FolkcraftVanillaNeoForge {
     public FolkcraftVanillaNeoForge() {
-        // Run our common setup.
         FolkcraftVanilla.init();
     }
 }
