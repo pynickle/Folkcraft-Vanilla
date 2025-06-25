@@ -1,11 +1,13 @@
 package com.euphony.folkcraft_vanilla.neoforge.datagen;
 
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
+import com.euphony.folkcraft_vanilla.neoforge.datagen.languages.LanguageGenerator;
+import com.euphony.folkcraft_vanilla.neoforge.datagen.languages.ZhCnLanguageGenerator;
 import com.euphony.folkcraft_vanilla.neoforge.datagen.models.BlockModelGenerator;
 import com.euphony.folkcraft_vanilla.neoforge.datagen.models.ItemModelGenerator;
 import com.euphony.folkcraft_vanilla.neoforge.datagen.recipes.RecipeGenerator;
-import com.euphony.folkcraft_vanilla.neoforge.datagen.tag.BlockTagGenerator;
-import com.euphony.folkcraft_vanilla.neoforge.datagen.tag.ItemTagGenerator;
+import com.euphony.folkcraft_vanilla.neoforge.datagen.tags.BlockTagGenerator;
+import com.euphony.folkcraft_vanilla.neoforge.datagen.tags.ItemTagGenerator;
 import net.minecraft.DetectedVersion;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -18,7 +20,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.LanguageProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.Optional;
@@ -48,6 +49,7 @@ public class DataGenerators {
         generator.addProvider(true, new LootGenerator(output, lookupProvider));
         generator.addProvider(true, new RecipeGenerator(output, lookupProvider));
         generator.addProvider(true, new LanguageGenerator(output));
+        generator.addProvider(true, new ZhCnLanguageGenerator(output));
 
         generator.addProvider(true, new PackMetadataGenerator(output).add(PackMetadataSection.TYPE, new PackMetadataSection(
                 Component.literal("Resources for Folkcraft Vanilla"),

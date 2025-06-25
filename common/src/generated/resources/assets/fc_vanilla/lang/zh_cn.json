@@ -1,0 +1,23 @@
+{
+  "block.fc_vanilla.amethyst_pressure_plate": "紫水晶压力板",
+  "block.fc_vanilla.black_stained_glass_carpet": "黑色染色玻璃地毯",
+  "block.fc_vanilla.blue_stained_glass_carpet": "蓝色染色玻璃地毯",
+  "block.fc_vanilla.brown_stained_glass_carpet": "棕色染色玻璃地毯",
+  "block.fc_vanilla.compressed_slime_block": "压缩黏液块",
+  "block.fc_vanilla.cyan_stained_glass_carpet": "青色染色玻璃地毯",
+  "block.fc_vanilla.glass_carpet": "玻璃地毯",
+  "block.fc_vanilla.gray_stained_glass_carpet": "灰色染色玻璃地毯",
+  "block.fc_vanilla.green_stained_glass_carpet": "绿色染色玻璃地毯",
+  "block.fc_vanilla.light_blue_stained_glass_carpet": "淡蓝色染色玻璃地毯",
+  "block.fc_vanilla.light_gray_stained_glass_carpet": "淡灰色染色玻璃地毯",
+  "block.fc_vanilla.lime_stained_glass_carpet": "黄绿色染色玻璃地毯",
+  "block.fc_vanilla.magenta_stained_glass_carpet": "品红色染色玻璃地毯",
+  "block.fc_vanilla.orange_stained_glass_carpet": "橙色染色玻璃地毯",
+  "block.fc_vanilla.pink_stained_glass_carpet": "粉红色染色玻璃地毯",
+  "block.fc_vanilla.purple_stained_glass_carpet": "紫色染色玻璃地毯",
+  "block.fc_vanilla.red_stained_glass_carpet": "红色染色玻璃地毯",
+  "block.fc_vanilla.tinted_glass_carpet": "遮光玻璃地毯",
+  "block.fc_vanilla.white_stained_glass_carpet": "白色染色玻璃地毯",
+  "block.fc_vanilla.yellow_stained_glass_carpet": "黄色染色玻璃地毯",
+  "itemGroup.fc_vanilla.blocks": "方块"
+}

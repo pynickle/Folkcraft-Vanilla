@@ -1,4 +1,4 @@
-package com.euphony.folkcraft_vanilla.neoforge.datagen;
+package com.euphony.folkcraft_vanilla.neoforge.datagen.languages;
 
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
 import com.euphony.folkcraft_vanilla.common.init.FCBlocks;
@@ -9,7 +9,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.neoforged.neoforge.common.data.LanguageProvider;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.function.Supplier;
 

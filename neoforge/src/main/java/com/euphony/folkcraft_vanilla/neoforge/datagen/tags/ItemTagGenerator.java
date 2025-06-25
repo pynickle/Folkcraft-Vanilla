@@ -1,4 +1,4 @@
-package com.euphony.folkcraft_vanilla.neoforge.datagen.tag;
+package com.euphony.folkcraft_vanilla.neoforge.datagen.tags;
 
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
 import net.minecraft.core.HolderLookup;
