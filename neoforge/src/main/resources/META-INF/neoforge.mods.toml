@@ -11,7 +11,7 @@ authors = "ENC_Euphony"
 description = '''
 Some interesting little things.
 '''
-#logoFile = ""
+logoFile = "icon.png"
 
 [[dependencies.fc_vanilla]]
 modId = "neoforge"
