@@ -2,6 +2,7 @@ package com.euphony.folkcraft_vanilla.neoforge.datagen.models;
 
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
 import com.euphony.folkcraft_vanilla.common.init.FCBlocks;
+import com.euphony.folkcraft_vanilla.common.init.FCItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -21,6 +22,8 @@ public class ItemModelGenerator extends ItemModelProvider {
 
         simpleBlockItem(FCBlocks.GLASS_CARPET.get());
         simpleBlockItem(FCBlocks.TINTED_GLASS_CARPET.get());
+
+        basicItem(FCItems.SOUL_RETALIATION_TOTEM.get());
 
         simpleBlockItem(FCBlocks.WHITE_STAINED_GLASS_CARPET.get());
         simpleBlockItem(FCBlocks.ORANGE_STAINED_GLASS_CARPET.get());

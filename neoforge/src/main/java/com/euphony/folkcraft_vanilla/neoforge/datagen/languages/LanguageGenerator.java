@@ -3,6 +3,7 @@ package com.euphony.folkcraft_vanilla.neoforge.datagen.languages;
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
 import com.euphony.folkcraft_vanilla.common.init.FCBlocks;
 import com.euphony.folkcraft_vanilla.common.init.FCCreativeTabs;
+import com.euphony.folkcraft_vanilla.common.init.FCItems;
 import com.euphony.folkcraft_vanilla.utils.FormatUtils;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -20,12 +21,16 @@ public class LanguageGenerator extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addItemGroup(FCCreativeTabs.BLOCKS_TAB, "Blocks");
+        addItemGroup(FCCreativeTabs.ITEMS_TAB, "Items");
+        addItemGroup(FCCreativeTabs.DECORATION_BLOCKS_TAB, "Decoration Blocks");
 
         addBlock(FCBlocks.AMETHYST_PRESSURE_PLATE, "Amethyst Pressure Plate");
         addBlock(FCBlocks.COMPRESSED_SLIME_BLOCK, "Compressed Slime Block");
 
         addBlock(FCBlocks.GLASS_CARPET, "Glass Carpet");
         addBlock(FCBlocks.TINTED_GLASS_CARPET, "Tinted Glass Carpet");
+
+        addItem(FCItems.SOUL_RETALIATION_TOTEM, "Soul Retaliation Totem");
 
         for(DyeColor dyeColor : DyeColor.values()) {
             String color = dyeColor.getName();

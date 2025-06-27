@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fc_vanilla:item/soul_retaliation_totem"
+  }
+}

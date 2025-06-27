@@ -19,5 +19,8 @@
   "block.fc_vanilla.tinted_glass_carpet": "Tinted Glass Carpet",
   "block.fc_vanilla.white_stained_glass_carpet": "White Stained Glass Carpet",
   "block.fc_vanilla.yellow_stained_glass_carpet": "Yellow Stained Glass Carpet",
-  "itemGroup.fc_vanilla.blocks": "Blocks"
+  "item.fc_vanilla.soul_retaliation_totem": "Soul Retaliation Totem",
+  "itemGroup.fc_vanilla.blocks": "Blocks",
+  "itemGroup.fc_vanilla.decoration_blocks": "Decoration Blocks",
+  "itemGroup.fc_vanilla.items": "Items"
 }

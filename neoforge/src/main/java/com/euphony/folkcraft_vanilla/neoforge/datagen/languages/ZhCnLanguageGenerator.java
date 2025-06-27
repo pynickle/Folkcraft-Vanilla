@@ -3,6 +3,7 @@ package com.euphony.folkcraft_vanilla.neoforge.datagen.languages;
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
 import com.euphony.folkcraft_vanilla.common.init.FCBlocks;
 import com.euphony.folkcraft_vanilla.common.init.FCCreativeTabs;
+import com.euphony.folkcraft_vanilla.common.init.FCItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.CreativeModeTab;
@@ -18,12 +19,16 @@ public class ZhCnLanguageGenerator extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addItemGroup(FCCreativeTabs.BLOCKS_TAB, "方块");
+        addItemGroup(FCCreativeTabs.ITEMS_TAB, "物品");
+        addItemGroup(FCCreativeTabs.DECORATION_BLOCKS_TAB, "装饰方块");
 
         addBlock(FCBlocks.AMETHYST_PRESSURE_PLATE, "紫水晶压力板");
         addBlock(FCBlocks.COMPRESSED_SLIME_BLOCK, "压缩黏液块");
 
         addBlock(FCBlocks.GLASS_CARPET, "玻璃地毯");
         addBlock(FCBlocks.TINTED_GLASS_CARPET, "遮光玻璃地毯");
+
+        addItem(FCItems.SOUL_RETALIATION_TOTEM, "灵魂复仇图腾");
 
         addBlock(FCBlocks.WHITE_STAINED_GLASS_CARPET, "白色染色玻璃地毯");
         addBlock(FCBlocks.ORANGE_STAINED_GLASS_CARPET, "橙色染色玻璃地毯");

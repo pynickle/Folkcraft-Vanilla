@@ -12,6 +12,8 @@ public class FCCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(FolkcraftVanilla.MOD_ID, Registries.CREATIVE_MODE_TAB);
 
     public static final RegistrySupplier<CreativeModeTab> BLOCKS_TAB;
+    public static final RegistrySupplier<CreativeModeTab> DECORATION_BLOCKS_TAB;
+    public static final RegistrySupplier<CreativeModeTab> ITEMS_TAB;
 
     static {
         BLOCKS_TAB = TABS.register(
@@ -24,6 +26,17 @@ public class FCCreativeTabs {
                                         (parameters, output) -> {
                                             output.accept(FCBlocks.AMETHYST_PRESSURE_PLATE.get());
                                             output.accept(FCBlocks.COMPRESSED_SLIME_BLOCK.get());
+                                        })
+                                .build()
+        );
+        DECORATION_BLOCKS_TAB = TABS.register(
+                "decoration_blocks",
+                () ->
+                        CreativeModeTab.builder(CreativeModeTab.Row.TOP, 1)
+                                .title(Component.translatable("itemGroup.fc_vanilla.decoration_blocks"))
+                                .icon(() -> new ItemStack(FCBlocks.GLASS_CARPET.get()))
+                                .displayItems(
+                                        (parameters, output) -> {
                                             output.accept(FCBlocks.GLASS_CARPET.get());
                                             output.accept(FCBlocks.TINTED_GLASS_CARPET.get());
                                             output.accept(FCBlocks.WHITE_STAINED_GLASS_CARPET.get());
@@ -43,6 +56,18 @@ public class FCCreativeTabs {
                                             output.accept(FCBlocks.RED_STAINED_GLASS_CARPET.get());
                                             output.accept(FCBlocks.BLACK_STAINED_GLASS_CARPET.get());
 
+                                        })
+                                .build()
+        );
+        ITEMS_TAB = TABS.register(
+                "items",
+                () ->
+                        CreativeModeTab.builder(CreativeModeTab.Row.TOP, 1)
+                                .title(Component.translatable("itemGroup.fc_vanilla.items"))
+                                .icon(() -> new ItemStack(FCItems.SOUL_RETALIATION_TOTEM))
+                                .displayItems(
+                                        (parameters, output) -> {
+                                            output.accept(FCItems.SOUL_RETALIATION_TOTEM.get());
                                         })
                                 .build()
         );

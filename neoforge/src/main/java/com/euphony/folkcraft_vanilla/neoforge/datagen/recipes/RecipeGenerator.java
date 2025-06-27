@@ -1,11 +1,14 @@
 package com.euphony.folkcraft_vanilla.neoforge.datagen.recipes;
 
 import com.euphony.folkcraft_vanilla.common.init.FCBlocks;
+import com.euphony.folkcraft_vanilla.common.init.FCItems;
 import com.euphony.folkcraft_vanilla.utils.Utils;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
@@ -21,6 +24,18 @@ public class RecipeGenerator extends RecipeProvider {
     @Override
     protected void buildRecipes(@NotNull RecipeOutput recipeOutput) {
         pressurePlate(recipeOutput, FCBlocks.AMETHYST_PRESSURE_PLATE.get().asItem(), Blocks.AMETHYST_BLOCK);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FCItems.SOUL_RETALIATION_TOTEM.get().asItem())
+                .pattern("ASA")
+                .pattern("ETE")
+                .pattern(" B ")
+                .define('A', Items.ECHO_SHARD)
+                .define('S', Items.GHAST_TEAR)
+                .define('E', Items.CRYING_OBSIDIAN)
+                .define('T', Items.TOTEM_OF_UNDYING)
+                .define('B', Items.NETHERITE_SCRAP)
+                .unlockedBy("has_item", has(Items.TOTEM_OF_UNDYING))
+                .save(recipeOutput, createKey("soul_retaliation_totem"));
 
         buildGlassCarpetRecipes(recipeOutput);
 

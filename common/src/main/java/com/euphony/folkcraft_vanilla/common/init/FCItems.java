@@ -6,6 +6,7 @@ import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 
 import java.util.function.Function;
@@ -13,6 +14,9 @@ import java.util.function.Function;
 public class FCItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(FolkcraftVanilla.MOD_ID, Registries.ITEM);
+
+    public static final RegistrySupplier<Item> SOUL_RETALIATION_TOTEM = register("soul_retaliation_totem",
+            new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
 
     // public static final RegistrySupplier<Item> GHAST_SNACK_PACK = register("ghast_snack_pack", GhastSnackPackItem::new);
 

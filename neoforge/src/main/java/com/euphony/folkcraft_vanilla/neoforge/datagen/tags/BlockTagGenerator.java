@@ -22,6 +22,8 @@ public class BlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(BlockTags.PRESSURE_PLATES).add(FCBlocks.AMETHYST_PRESSURE_PLATE.get());
+        tag(BlockTags.WALL_POST_OVERRIDE).add(FCBlocks.AMETHYST_PRESSURE_PLATE.get());
         tag(BlockTags.MINEABLE_WITH_PICKAXE).add(FCBlocks.AMETHYST_PRESSURE_PLATE.get(),
                 FCBlocks.GLASS_CARPET.get(),
                 FCBlocks.TINTED_GLASS_CARPET.get(),
