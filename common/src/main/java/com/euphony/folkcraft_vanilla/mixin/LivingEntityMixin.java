@@ -2,19 +2,23 @@ package com.euphony.folkcraft_vanilla.mixin;
 
 import com.euphony.folkcraft_vanilla.common.init.FCItems;
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.stats.Stats;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -43,7 +47,7 @@ public class LivingEntityMixin {
                 if (livingEntity instanceof ServerPlayer serverPlayer) {
                     serverPlayer.awardStat(Stats.ITEM_USED.get(FCItems.SOUL_RETALIATION_TOTEM.get()));
                     CriteriaTriggers.USED_TOTEM.trigger(serverPlayer, itemStack);
-                    livingEntity.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
+                    serverPlayer.gameEvent(GameEvent.ITEM_INTERACT_FINISH);
                 }
 
                 livingEntity.level().explode(livingEntity, livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), 4.0F, false, Level.ExplosionInteraction.MOB);
@@ -55,11 +59,30 @@ public class LivingEntityMixin {
                 livingEntity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 2));
                 livingEntity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
                 livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 1));
-                livingEntity.level().broadcastEntityEvent(livingEntity, (byte)35);
+                fc_vanilla$playActivateAnimation(itemStack, livingEntity.getId());
             }
 
             cir.setReturnValue(itemStack != null);
             cir.cancel();
+        }
+    }
+
+    @Unique
+    private static void fc_vanilla$playActivateAnimation(ItemStack itemStack, int entityId) {
+        Minecraft mc = Minecraft.getInstance();
+        var level = mc.level;
+
+        if (level != null) {
+            Entity entity = mc.level.getEntity(entityId);
+
+            if (entity != null) {
+                mc.particleEngine.createTrackingEmitter(entity, ParticleTypes.TOTEM_OF_UNDYING, 30);
+                level.playLocalSound(entity.getX(), entity.getY(), entity.getZ(), SoundEvents.TOTEM_USE, entity.getSoundSource(), 1.0F, 1.0F, false);
+
+                if (entity == mc.player) {
+                    mc.gameRenderer.displayItemActivation(itemStack);
+                }
+            }
         }
     }
 }
