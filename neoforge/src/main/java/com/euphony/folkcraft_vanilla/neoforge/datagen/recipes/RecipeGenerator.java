@@ -10,6 +10,7 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
@@ -36,6 +37,17 @@ public class RecipeGenerator extends RecipeProvider {
                 .define('B', Items.NETHERITE_SCRAP)
                 .unlockedBy("has_item", has(Items.TOTEM_OF_UNDYING))
                 .save(recipeOutput, createKey("soul_retaliation_totem"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, FCItems.PORTABLE_JUKEBOX.get().asItem())
+                .pattern("SDS")
+                .pattern("SLS")
+                .pattern("PPP")
+                .define('S', Items.STRING)
+                .define('L', Items.LEATHER)
+                .define('D', Items.DIAMOND)
+                .define('P', ItemTags.PLANKS)
+                .unlockedBy("has_item", has(Items.DIAMOND))
+                .save(recipeOutput, createKey("portable_jukebox"));
 
         buildGlassCarpetRecipes(recipeOutput);
 
