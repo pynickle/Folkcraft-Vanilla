@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fc_vanilla:item/portable_jukebox"
+  }
+}

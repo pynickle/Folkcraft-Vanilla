@@ -29,6 +29,7 @@ public class ZhCnLanguageGenerator extends LanguageProvider {
         addBlock(FCBlocks.TINTED_GLASS_CARPET, "遮光玻璃地毯");
 
         addItem(FCItems.SOUL_RETALIATION_TOTEM, "灵魂复仇图腾");
+        addItem(FCItems.PORTABLE_JUKEBOX, "便携式唱片机");
 
         addBlock(FCBlocks.WHITE_STAINED_GLASS_CARPET, "白色染色玻璃地毯");
         addBlock(FCBlocks.ORANGE_STAINED_GLASS_CARPET, "橙色染色玻璃地毯");

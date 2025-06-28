@@ -24,6 +24,7 @@ public class ItemModelGenerator extends ItemModelProvider {
         simpleBlockItem(FCBlocks.TINTED_GLASS_CARPET.get());
 
         basicItem(FCItems.SOUL_RETALIATION_TOTEM.get());
+        basicItem(FCItems.PORTABLE_JUKEBOX.get());
 
         simpleBlockItem(FCBlocks.WHITE_STAINED_GLASS_CARPET.get());
         simpleBlockItem(FCBlocks.ORANGE_STAINED_GLASS_CARPET.get());

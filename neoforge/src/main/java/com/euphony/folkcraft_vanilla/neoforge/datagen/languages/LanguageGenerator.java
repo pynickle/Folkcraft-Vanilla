@@ -31,6 +31,7 @@ public class LanguageGenerator extends LanguageProvider {
         addBlock(FCBlocks.TINTED_GLASS_CARPET, "Tinted Glass Carpet");
 
         addItem(FCItems.SOUL_RETALIATION_TOTEM, "Soul Retaliation Totem");
+        addItem(FCItems.PORTABLE_JUKEBOX, "Portable Jukebox");
 
         for(DyeColor dyeColor : DyeColor.values()) {
             String color = dyeColor.getName();

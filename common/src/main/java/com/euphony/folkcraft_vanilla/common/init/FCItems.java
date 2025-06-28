@@ -1,6 +1,7 @@
 package com.euphony.folkcraft_vanilla.common.init;
 
 import com.euphony.folkcraft_vanilla.FolkcraftVanilla;
+import com.euphony.folkcraft_vanilla.common.item.PortableJukeboxItem;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
@@ -17,6 +18,9 @@ public class FCItems {
 
     public static final RegistrySupplier<Item> SOUL_RETALIATION_TOTEM = register("soul_retaliation_totem",
             new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+
+    public static final RegistrySupplier<PortableJukeboxItem> PORTABLE_JUKEBOX = register("portable_jukebox", PortableJukeboxItem::new,
+            new Item.Properties().stacksTo(1));
 
     // public static final RegistrySupplier<Item> GHAST_SNACK_PACK = register("ghast_snack_pack", GhastSnackPackItem::new);
 

@@ -68,6 +68,7 @@ public class FCCreativeTabs {
                                 .displayItems(
                                         (parameters, output) -> {
                                             output.accept(FCItems.SOUL_RETALIATION_TOTEM.get());
+                                            output.accept(FCItems.PORTABLE_JUKEBOX.get());
                                         })
                                 .build()
         );
