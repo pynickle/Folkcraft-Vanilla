@@ -1,6 +1,9 @@
 package com.euphony.folkcraft_vanilla.common.item;
 
 import com.euphony.folkcraft_vanilla.common.item.utils.PortableJukeboxSongPlayer;
+import net.minecraft.advancements.critereon.InventoryChangeTrigger;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
@@ -24,7 +27,7 @@ public class PortableJukeboxItem extends Item {
     boolean hasClientStop = false;
     boolean hasClientPlay = false;
     ItemStack discStack = ItemStack.EMPTY;
-    private final PortableJukeboxSongPlayer portableJukeboxSongPlayer;
+    public final PortableJukeboxSongPlayer portableJukeboxSongPlayer;
 
     public PortableJukeboxItem(Properties properties) {
         super(properties.component(DataComponents.JUKEBOX_PLAYABLE, null));
@@ -67,8 +70,7 @@ public class PortableJukeboxItem extends Item {
                             portableJukeboxSongPlayer.stop();
                         } else {
                             hasClientPlay = true;
-                            int i = level.registryAccess().registryOrThrow(Registries.JUKEBOX_SONG).getId(song.value());
-                            level.levelEvent(null, 1010, player.getOnPos(), i);
+                            Minecraft.getInstance().gui.setNowPlaying(song.value().description());
                             portableJukeboxSongPlayer.play(player, level, song);
                         }
                     } else {
