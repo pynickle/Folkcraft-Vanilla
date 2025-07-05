@@ -5,18 +5,14 @@ import com.euphony.folkcraft_vanilla.common.item.PortableJukeboxItem;
 import com.euphony.folkcraft_vanilla.common.item.utils.PortableJukeboxSongPlayer;
 import dev.architectury.event.EventResult;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.ClientboundStopSoundPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.JukeboxPlayable;
 import net.minecraft.world.level.Level;
-
-import java.util.logging.Logger;
 
 public class PortableJukeboxEvent {
     public static EventResult dropItem(Player player, ItemEntity itemEntity) {

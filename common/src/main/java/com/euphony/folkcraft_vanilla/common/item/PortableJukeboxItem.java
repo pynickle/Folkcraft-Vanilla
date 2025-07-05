@@ -1,12 +1,9 @@
 package com.euphony.folkcraft_vanilla.common.item;
 
 import com.euphony.folkcraft_vanilla.common.item.utils.PortableJukeboxSongPlayer;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.ClientboundStopSoundPacket;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundSource;

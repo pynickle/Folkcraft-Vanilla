@@ -3,12 +3,7 @@ package com.euphony.folkcraft_vanilla.event;
 import com.euphony.folkcraft_vanilla.event.event.CompressedSlimeBlockEvent;
 import com.euphony.folkcraft_vanilla.event.event.PortableJukeboxEvent;
 import dev.architectury.event.events.common.BlockEvent;
-import dev.architectury.event.events.common.InteractionEvent;
 import dev.architectury.event.events.common.PlayerEvent;
-import dev.architectury.event.events.common.TickEvent;
-import net.minecraft.world.entity.player.Inventory;
-
-import java.awt.event.ItemEvent;
 
 public class FCEvents {
     public static void init() {
